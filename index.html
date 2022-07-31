@@ -39,22 +39,7 @@
         numberInput.addEventListener('input', getFactAjax);
 
         // Fetch with XHR
-        function getFactAjax() {
-            let number = numberInput.value;
-            if (number != '') {
-                let xhr = new XMLHttpRequest();
-                xhr.open('GET', 'http://numbersapi.com/' + number);
-
-                xhr.onload = function () {
-                    if (this.status == 200) {
-                        fact.style.display = 'block';
-                        factText.innerText = this.responseText;
-                    }
-                }
-
-                xhr.send();
-            }
-        }
+     
            // Fetch with Fetch API
            function getFactFetch() {
             let number = numberInput.value;
